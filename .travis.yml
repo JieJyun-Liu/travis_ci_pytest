@@ -1,5 +1,8 @@
 language: python
 python:
-  - "3.7"      # current default Python on Travis CI
+  - "3.7"
+install:
+  - pip uninstall pytest
+  - pip install pytest
 script:
   - pytest
