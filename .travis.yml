@@ -1,4 +1,5 @@
 language: python
 python:
-	- "3.6"
-script: pytest -m pytest
+  - "3.6"      # current default Python on Travis CI
+script:
+  - pytest -m pytest
