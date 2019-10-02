@@ -1,7 +1,14 @@
+dist: trusty
 language: python
 python:
   - "3.7"
 install:
   - pip install -e .
+addons:
+  sonarcloud:
+    organization: "jiejyun-liu"
+    token:
+      secure: $SONAR_TOKEN
 script:
   - pytest
+  - sonar-scanner
