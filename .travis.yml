@@ -11,5 +11,5 @@ addons:
     token:
       secure: $SONAR_TOKEN
 script:
-  - pytest --cov travis_ci_pytest tests/
+  - pytest --cov-report xml --cov tests/
   - sonar-scanner
