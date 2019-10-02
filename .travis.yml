@@ -4,11 +4,12 @@ python:
   - "3.6"
 install:
   - pip install -e .
+  - pip install pytest-cov
 addons:
   sonarcloud:
     organization: "jiejyun-liu"
     token:
       secure: $SONAR_TOKEN
 script:
-  - pytest
+  - pytest --cov tests
   - sonar-scanner
